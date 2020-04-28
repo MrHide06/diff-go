@@ -13,8 +13,8 @@ func main() {
 func difference(slice1 [20]int, slice2 [20]int) []int {
 	var diff []int
 
-	// Loop two times, first to find slice1 strings not in slice2,
-	// second loop to find slice2 strings not in slice1
+	// Dua kali loop, loopingan pertama untuk mencari data di slice1 yg tidak ada di slice2
+	// loopingan kedua untuk mencari data di slice2 yg tidak ada di slice1
 	for i := 0; i < 2; i++ {
 		for _, s1 := range slice1 {
 			found := false
@@ -24,12 +24,12 @@ func difference(slice1 [20]int, slice2 [20]int) []int {
 					break
 				}
 			}
-			// String not found. We add it to return slice
+			// Jika String tidak ditemukan, kita tambahkan s1 ke diff
 			if !found {
 				diff = append(diff, s1)
 			}
 		}
-		// Swap the slices, only if it was the first loop
+		// Swap slcie jika ini hanya 1 kali loop
 		if i == 0 {
 			slice1, slice2 = slice2, slice1
 		}
