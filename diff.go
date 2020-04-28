@@ -2,6 +2,14 @@ package main
 
 import "fmt"
 
+func main() {
+	slice1 := [20]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
+	slice2 := [20]int{1, 3, 5, 7, 9, 14, 13, 15, 17, 19, 21, 23, 25, 27, 29, 2, 4, 8, 10, 12}
+
+	fmt.Printf("Angka yg tidak sama antar array 1 dengan array 2 adalah:\n")
+	fmt.Printf("%+v\n", difference(slice1, slice2))
+}
+
 func difference(slice1 [20]int, slice2 [20]int) []int {
 	var diff []int
 
@@ -28,12 +36,4 @@ func difference(slice1 [20]int, slice2 [20]int) []int {
 	}
 
 	return diff
-}
-
-func main() {
-	slice1 := [20]int{1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20}
-	slice2 := [20]int{1, 3, 5, 7, 9, 14, 13, 15, 17, 19, 21, 23, 25, 27, 29, 2, 4, 8, 10, 12}
-
-	fmt.Printf("Angka yg tidak sama antar array 1 dengan array 2 adalah:\n")
-	fmt.Printf("%+v\n", difference(slice1, slice2))
 }
